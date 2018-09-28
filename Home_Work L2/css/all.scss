@@ -1,0 +1,41 @@
+@import 'reset.scss';
+
+$hovercol: #22a9e6;
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.wrapper{
+	max-width: 1200px;
+	height: 100vh;
+	margin: 0 auto;
+	background: blue;
+}
+
+.menu{
+	text-align: center;
+	
+	li{
+		display: inline-block;
+		margin-left: 30px;
+		a{
+			display: block;
+			padding: 12px;
+			text-transform: uppercase;
+			color: #fff;
+			&:hover{
+				color: $hovercol;
+			}
+		}
+	}
+}
