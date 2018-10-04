@@ -18,7 +18,7 @@ var newList = document.createElement('ul');
 newList.id = "myList";
 var newListAdress = document.body
 newListAdress.appendChild(newList);
-newList.style.float = "right";
+//newList.style.float = "right";
 
  //создаём новые элементы li
 var  newLi1 = document.createElement('li');
@@ -47,9 +47,15 @@ newUlContentAdress.appendChild(newLi3);
 newUlContentAdress.appendChild(newLi4);
 newUlContentAdress.appendChild(newLi5);
 
-
+var row = document.getElementsByClassName("row");
+for (var i = 0; i <= row.length - 1; i++) {
+	  var col = row[i].getElementsByClassName("col");
+    for (var q = 0; q <= col.length - 1; q++) {
+         col[q].innerHTML = (i + 1) + "," + (q + 1);
+   };
+};
 //var r1 = document.getElementsByClassName("row")[0];
-var col1_1 = document.getElementsByClassName("col")[0];
+/*var col1_1 = document.getElementsByClassName("col")[0];
 var col2_1 = document.getElementsByClassName("col")[1];
 var col3_1 = document.getElementsByClassName("col")[2];
 var col4_1 = document.getElementsByClassName("col")[3];
@@ -80,4 +86,5 @@ var col4_4 = document.getElementsByClassName("col")[15];
 col1_4.innerHTML = "1.4";
 col2_4.innerHTML = "2.4";
 col3_4.innerHTML = "3.4";
-col4_4.innerHTML = "4.4";
+col4_4.innerHTML = "4.4";*/
+
