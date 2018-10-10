@@ -1,94 +1,118 @@
 +(function(){
   var table = document.querySelector("table");
-  //var cell = table.getElementsByTagName("td")
   var cell = table.querySelectorAll('td'); 
   var step = "0";
   var screen = document.querySelector('#screen');
-  screen.innerHTML = "Ходят крестики";
-  console.log(screen);
-	table.onclick = function(event){       
-    	if(event.target.className=="cell"){
-				if(step % 2 == 0){
-					event.target.innerHTML = "x";
-					screen.innerHTML = "Ходят нолики"					
-					//event.target.innerHTML = "<img src="../images/pent.jpg">";					
+  const IMG_X = '<img src="images/run1.jpg" width="150" height="150" alt="" />';
+  const IMG_0 = '<img src="images/pent.jpg" width="150" height="150" alt="" />';
+  screen.innerHTML = "Ходят адепты Сварога"; 
+ /* var imageMap = {
+    "0": IMG_0,
+    "x": IMG_X
+};*/
+
+	table.onclick = function(event){
+	//var step =  (step % 2 == 0) ? 'x' : '0'; 
+		if(event.target.className=="cell") {    	
+				if(step % 2 == 0){					
+					screen.innerHTML = "Ходят гламурные сатанисты";
+					event.target.innerHTML += IMG_X;
+					event.target.setAttribute("data-value", "x")
+										
 				}
 				else{
-					//event.target.innerHTML = "<img src="../images/run.jpg">	"
-					event.target.innerHTML = "0";
-					screen.innerHTML = "Ходят крестики"	
+					event.target.innerHTML += IMG_0;
+					event.target.setAttribute("data-value", "0");					
+					screen.innerHTML = "Ходят адепты Сварога";	
 				}
 				step++;
 				checking();
 		}
 	};
-     
+
 function checking() {
+	var fire = document.querySelector(".fire");
+	if (cell[0].getAttribute('data-value') == "x" && cell[1].getAttribute('data-value') == "x" && cell[2].getAttribute('data-value') == "x"){
+	alert("Победили адепты Сварога");		
+	clearField();	
+	//fire.classList.add("active");	
+	}
+	
+	if (cell[3].getAttribute('data-value') == "x" && cell[4].getAttribute('data-value') == "x" && cell[5].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[6].getAttribute('data-value') == "x" && cell[7].getAttribute('data-value') == "x" && cell[8].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[0].getAttribute('data-value') == "x" && cell[3].getAttribute('data-value') == "x" && cell[6].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[1].getAttribute('data-value') == "x" && cell[4].getAttribute('data-value') == "x" && cell[7].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[2].getAttribute('data-value') == "x" && cell[5].getAttribute('data-value') == "x" && cell[8].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[0].getAttribute('data-value') == "x" && cell[4].getAttribute('data-value') == "x" && cell[8].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
+	if (cell[2].getAttribute('data-value') == "x" && cell[4].getAttribute('data-value') == "x" && cell[6].getAttribute('data-value') == "x") {
+		alert("Победили адепты Сварога");
+		clearField();
+		//fire.classList.add("active");
+	}
 
-	if (cell[0].innerHTML=="x" && cell[1].innerHTML=="x" && cell[2].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[0].getAttribute('data-value') == "0" && cell[1].getAttribute('data-value') == "0" && cell[2].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[3].innerHTML=="x" && cell[4].innerHTML=="x" && cell[5].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[3].getAttribute('data-value') == "0" && cell[4].getAttribute('data-value') == "0" && cell[5].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[6].innerHTML=="x" && cell[7].innerHTML=="x" && cell[8].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[6].getAttribute('data-value') == "0" && cell[7].getAttribute('data-value') == "0" && cell[8].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[0].innerHTML=="x" && cell[3].innerHTML=="x" && cell[6].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[0].getAttribute('data-value') == "0" && cell[3].getAttribute('data-value') == "0" && cell[6].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		fire.classList.add("active");
 	}
-	if (cell[1].innerHTML=="x" && cell[4].innerHTML=="x" && cell[7].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[1].getAttribute('data-value') == "0" && cell[4].getAttribute('data-value') == "0" && cell[7].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[2].innerHTML=="x" && cell[5].innerHTML=="x" && cell[8].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[2].getAttribute('data-value') == "0" && cell[5].getAttribute('data-value') == "0" && cell[8].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[0].innerHTML=="x" && cell[4].innerHTML=="x" && cell[8].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[0].getAttribute('data-value') == "0" && cell[4].getAttribute('data-value') == "0" && cell[8].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
+		//fire.classList.add("active");
 	}
-	if (cell[2].innerHTML=="x" && cell[4].innerHTML=="x" && cell[6].innerHTML=="x") {
-		alert("Победили крестики!");
+	if (cell[2].getAttribute('data-value') == "0" && cell[4].getAttribute('data-value') == "0" && cell[6].getAttribute('data-value') == "0") {
+		alert("Победили гламурные сатанисты!");
 		clearField();
-	}
-
-	if (cell[0].innerHTML=="0" && cell[1].innerHTML=="0" && cell[2].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[3].innerHTML=="0" && cell[4].innerHTML=="0" && cell[5].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[6].innerHTML=="0" && cell[7].innerHTML=="0" && cell[8].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[0].innerHTML=="0" && cell[3].innerHTML=="0" && cell[6].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[1].innerHTML=="0" && cell[4].innerHTML=="0" && cell[7].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[2].innerHTML=="0" && cell[5].innerHTML=="0" && cell[8].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[0].innerHTML=="0" && cell[4].innerHTML=="0" && cell[8].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
-	}
-	if (cell[2].innerHTML=="0" && cell[4].innerHTML=="0" && cell[6].innerHTML=="0") {
-		alert("Победили нолики!");
-		clearField();
+		//fire.classList.add("active");
 	}
 	var both = false;      
     top: for(var i = 0; i < cell.length; i++) {
@@ -109,11 +133,14 @@ function checking() {
 }; 
 
 function clearField(){
-    var Step = "0";
-    for(var i = 0, lenght = cell.length; i < lenght; i++){
-   
+    var step = "0";
+    for(var i = 0, lenght = cell.length; i < lenght; i++){   
       cell[i].innerHTML = '';
+      cell[i].removeAttribute("data-value");
     }
-  };   
+  }; 
+  clearField();  
     
 }())
+
+

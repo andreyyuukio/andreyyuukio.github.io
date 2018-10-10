@@ -8,24 +8,38 @@
   
 }
 .desk{
-  max-width: 650px;
+  max-width: 1050px;
   min-height: 100vh;
   background: #32CD32; 
   margin: 0 auto;
+  position: relative;
+  .fire{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-35%);
+    display: none;
+  }
+}
+.active.fire{
+  display: block;
 }
 
 table{
   display: block;
   margin: 0 auto;
-  max-width: 218px;
+  max-width: 458px;
     td{  
-      width: 70px;
-      height: 70px;
+      width: 152px;
+      height: 152px;
       border: solid 2px #000;
       text-align: center;
       vertical-align: middle;
       font-size: 45px;
       cursor: pointer;
+      img{
+        display: block;       
+      }
     }
 
   
@@ -33,3 +47,4 @@ table{
 .screen{ 
   border-bottom: dotted 2px #228B22;
 }
+

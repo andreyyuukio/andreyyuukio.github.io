@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Charmonman");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Charmonman', cursive; }
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.wrapper {
+  max-width: 1250px;
+  margin: 0px auto;
+  background: green;
+  padding: 10px 15px; }
+
+.clock,
+.boomb,
+.second {
+  max-width: 500px;
+  margin: 20px auto;
+  background: yellow;
+  color: green;
+  font-size: 25px;
+  line-height: 30px;
+  padding: 12px; }
+
+.boomb {
+  color: red; }
+  .boomb .stopbombblock {
+    position: relative; }
+    .boomb .stopbombblock .infobomb {
+      font-size: 42px;
+      line-height: 50px; }
+    .boomb .stopbombblock .question {
+      float: left;
+      font-size: 20px; }
+    .boomb .stopbombblock .stopbomb {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(5%, -50%);
+      width: 100px;
+      padding: 8px 5px;
+      font-size: 22px;
+      line-height: 30px;
+      color: red;
+      background: yellow;
+      cursor: pointer; }
+
+.second {
+  position: relative; }
+  .second .display1,
+  .second .display2,
+  .second .display3 {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 125px;
+    height: 50px;
+    padding: 5px 10px;
+    background: #000;
+    color: yellow; }
+  .second .buttons {
+    left: 10px;
+    bottom: 0;
+    padding: 5px;
+    margin-top: 20px; }
+    .second .buttons input {
+      margin-top: 20px;
+      margin-left: 10px;
+      min-width: 50px;
+      padding: 5px;
+      cursor: pointer; }
+
+/*# sourceMappingURL=all.css.map */
