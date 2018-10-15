@@ -27,14 +27,14 @@ console.log(window)
 			}
            console.log(mail.value);
 
-           let phoneCheckGlobal = /^(\+?\(d+)?/;
-           let phoneckecking = phoneCheckGlobal.test(phone.value);
-           		if (phoneckecking != true) {
+           let phoneCheckGlobal = /^(\+)?(\d)+?/;
+           let phonechecking = phoneCheckGlobal.test(phone.value);
+           		if (phonechecking != true) {
            			alert("phone is ancorrect");
            		}
            		console.log(phone.value);
 
-           	let passCheckGlobal = /^([A-Z]?)(\d?)([a-z]{1,20})(\d?)?/;
+           	let passCheckGlobal = /^([0-9]?)([A-Z]?)([0-9]?)([a-z]{1,20})([0-9]?)?/;
            	let passckecking = passCheckGlobal.test(pass.value);
            		if (passckecking != true) {
            			alert("choose more dificule password!")

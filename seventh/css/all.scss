@@ -18,7 +18,6 @@ clearfix::after{
     overflow: hidden; 
 
    	.form-holder{
-
    		//float: right;
    		//margin-right: 60px;
    		.text-holder{ 
@@ -56,7 +55,7 @@ clearfix::after{
 		width: 150px;
 		margin: 45px auto;
 		text-align: left;	
-		.send-btn{		
+		#send-btn{		
 			display: block;
 			background: url(../image/contact-us-btn.png) 0 0 no-repeat;
 			text-decoration: none;			
@@ -72,15 +71,12 @@ clearfix::after{
 	}
 
   }
-  .infodiv{
-  	//display: none;
+
+  .infodiv{  	
   	margin: 25px auto;
   	padding: 12px;
   	width: 150px;
   	border: solid 2px yellow;
   	border-radius: 15%;  	
   }
-}
-.active.infodiv{
-	display: block;
 }

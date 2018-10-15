@@ -75,14 +75,14 @@ clearfix::after {
     width: 150px;
     margin: 45px auto;
     text-align: left; }
-    .contact-us .form-holder .btn-holder .send-btn {
+    .contact-us .form-holder .btn-holder #send-btn {
       display: block;
       background: url(../image/contact-us-btn.png) 0 0 no-repeat;
       text-decoration: none;
       padding: 14px 50px;
       font-weight: bold;
       color: #a20fea; }
-      .contact-us .form-holder .btn-holder .send-btn:hover {
+      .contact-us .form-holder .btn-holder #send-btn:hover {
         cursor: pointer;
         text-decoration: none;
         color: #077abe; }
@@ -92,8 +92,5 @@ clearfix::after {
     width: 150px;
     border: solid 2px yellow;
     border-radius: 15%; }
-
-.active.infodiv {
-  display: block; }
 
 /*# sourceMappingURL=all.css.map */
