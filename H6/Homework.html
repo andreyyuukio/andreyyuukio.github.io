@@ -1,0 +1,79 @@
+<!-- Напишите регулярные выражения, которые будут выбирать 
+    индекс - 55535 - 5 numbers
+    ip адресс, пример 255.255.255.255
+    цены в долларах - $0.84, $2.84, $4
+    дата в виде - 30/12/2014 - день, месяц, год
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>regular</title>
+ </head>
+ <body>
+ 	<span id="text">abcdefgАИВЫА</span><br>
+ 	<span>Изначально неправильный подбор, выдаст false: <br>
+ 		let text = document.querySelector('#text');<br> 
+	 let textcheck = /^(\w)+$/.test(text);<br>
+	 console.log("text: " + textcheck);<br>
+	</span><br>
+	<span id="index">55535</span><br>
+ 	<span>
+ 	let indexstr = document.querySelector('#index');<br>
+ 	let indexcheck = /(\d){5,}/;<br>
+  	let index = indexcheck.test(indexstr);<br>
+ 		console.log("index: " + index);<br>
+ 	 </span><br>
+ 	<span id="ip">255.255.255.255</span><br>
+ 	<span>
+ 		let ipstr = document.querySelector('#ip');<br>
+
+ 	let ipstrcheck = /^(\d){3,}\.(\d){3,}\.(\d){3,}\.(\d){3,}$/;<br>
+  let ip = ipstrcheck.test(ipstr);<br>
+ 	  console.log("ip: " + ip);<br>
+ 	</span><br>
+ 	<span id="cost"> $0.84, $2.84, $4</span><br>
+ 	<span>
+ 		let coststr = document.querySelector('#cost');<br>
+ 		let costcheck = /^\$(\d)+\.(\d)+$/;<br>
+ 	let cost = costcheck.test(coststr);<br>
+ 		console.log("cost: " + cost);<br>
+ 	</span><br>
+ 	<span id="date">30/12/2014</span><br> 
+ 	<span>
+ 		let datestr = document.querySelector('#date');<br>
+ 		let datecheck = /^([1-31])\/([1-12])\/(\d{4})$/;
+ 		<br>
+ 	let date = datecheck.test(datestr);<br>
+ 		console.log("date: " + date);<br>
+ 	</span>
+ 	 <script>
+ 	let indexstr = document.querySelector('#index');
+ 	let ipstr = document.querySelector('#ip');
+ 	let coststr = document.querySelector('#cost');
+ 	let datestr = document.querySelector('#date');
+	let text = document.querySelector('#text'); 
+
+	 let textcheck = /^(\w)+$/.test(text);
+	 console.log("text: " + textcheck);
+	
+ 	let indexcheck = /(\d){5,}/;
+  	let index = indexcheck.test(indexstr);
+ 		console.log("index: " + index);
+
+ 	let ipstrcheck = /^(\d){3,}\.(\d){3,}\.(\d){3,}\.(\d){3,}$/;
+  	let ip = ipstrcheck.test(ipstr);
+ 	  console.log("ip: " + ip);
+
+ 	let costcheck = /^\$(\d)+\.(\d)+$/;
+ 	let cost = costcheck.test(coststr);
+ 		console.log("cost: " + cost);
+
+ 	let datecheck = /^([1-31])\/([1-12])\/(\d{4})$/;
+ 	let date = datecheck.test(datestr);
+ 		console.log("date: " + date);
+
+ </script>
+ <!--/^(\w+)@\.([a-z]+)$/!-->	
+ </body>
+ </html>
