@@ -13,34 +13,26 @@ console.log(window)
 	
 		button.onclick = function() {	
 
-			let nameCheckGlobal = /^[A-Z]?[a-z]{1,12}\s?[A-Z]?[a-z]{1,12}?/;
-			let namechecking = nameCheckGlobal.test(name.value);
-			if(namechecking != true) {				
-				alert("The name is ancorrect");
-			}
-           console.log(name.value);
+			let nameCheckGlobal = /^([A-Z]?)([a-z]{1,12})(\s?)([A-Z]?)([a-z]{1,12})?/;
+			let namechecking = nameCheckGlobal.test(name.value);			
+          	 console.log(name.value);
 
            	let mailCheckGlobal = /^\w+@\w+\.[a-z]{2,4}/;
 			let mailchecking = mailCheckGlobal.test(mail.value);
-			if (mailchecking != true) {
-				alert("The mail-adress is not true");
-				//info.classList.add('active');
-				//info.innerHTML= "The mail-adress is not true";
-			}
-           console.log(mail.value);
+			
+           	console.log(mail.value);
 
-           let phoneCheckGlobal = /^(\+)?(\d)+?/;
+           let phoneCheckGlobal = /^(\+?)([0]{0,3})([0-9]{7,21})+/;
            let phonechecking = phoneCheckGlobal.test(phone.value);
-           		if (phonechecking != true) {
-           			alert("phone is ancorrect");
-           		}
+           		
            		console.log(phone.value);
 
-           let passCheckGlobal = /(?=.*[0-9]+)(?=.*[!@#$%^&*]?)(?=.*[a-z])(?=.*[A-Z]+){8,}/g;
+           let passCheckGlobal = /(?=.*[0-9]+)(?=.*[!@#$%^&*]?)(?=.*[a-z]+)(?=.*[A-Z]+){8,}/g;
            //	let passCheckGlobal = /([0-9]+)([A-Z]+)([a-z]{2,20})([!@#$%^&*-_=+]*)/;  [0-9a-zA-Z!@#$%^&*]
            	let passckecking = passCheckGlobal.test(pass.value);
            		if (passckecking != true) {
            			alert("choose more dificule password!")
+           			forminfo.innerHTML = "";
            		}
            		console.log(pass.value);
 
@@ -48,6 +40,23 @@ console.log(window)
            		forminfo.innerHTML += ("mail: " + mail.value + "<br>");
            		forminfo.innerHTML += ("phone: " + phone.value + "<br>");
            		forminfo.innerHTML += ("password : " + pass.value);
+           			
+           			if(namechecking != true) {				
+						alert("The name is ancorrect");
+						forminfo.innerHTML = "";
+
+					}
+
+					if (mailchecking != true) {
+						alert("The mail-adress is not true");
+						forminfo.innerHTML = "";
+				
+					}
+
+					if (phonechecking != true) {
+           				alert("phone is ancorrect");
+           				forminfo.innerHTML = "";
+           			}
 
            			if (pass.value != pass2.value){
            				alert("password is ancorrect");
