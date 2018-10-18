@@ -6,13 +6,18 @@
    btn.style.top = Math.random()*100 + '%';  
  
   if(true){
-     btn.onmouseover = function(event){      
+      btn.onmouseover = function fly(event){  
 
-        let btncord = btn.getBoundingClientRect();  
-       btn.style.left = (fcord.left + Math.random()* (fcord.left + field.clientWidth - fcord.left)) + "px";       
-      btn.style.top = (fcord.top + Math.random() *(fcord.top + field.clientHeight - fcord.top))*0.9 + "px";
+          let btnpos = btn.getBoundingClientRect();  
+          btn.style.left = (fcord.left + Math.random()* (fcord.left + field.clientWidth - fcord.left)) + "px";       
+          btn.style.top = (fcord.top + Math.random() *(fcord.top + field.clientHeight - fcord.top))*0.9 + "px";
   
+          if(btnpos.left >= (fcord.left + field.clientWidth)*Math.random && fcord.top >= (fcord.top + field.clientHeight)*Math.random){
+          this();
+          }          
+
       }
+
   }
 
     field.onmousemove = function() {
@@ -20,7 +25,11 @@
       var cursorX = event.clientX;
       var cursorY = event.clientY;        
         smile.style.left = cursorX + 15 * Math.random() + "px";       
-        smile.style.top = cursorY  + 10 * Math.random() + "px";         
+        smile.style.top = cursorY  + 10 * Math.random() + "px";  
+
+        if(cursorX <= (btnpos.left + 1.5 + "px") && cursorY <= (btnpos.top + 1.5 + "px")) {  
+          fly(event);
+        }       
       
     }
 
