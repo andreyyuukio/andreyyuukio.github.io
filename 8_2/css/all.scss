@@ -1,0 +1,34 @@
+@import	'reset.scss';
+@import 'icomoon.scss';
+*{
+	box-sizing: border-box;
+}
+  body{ 
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background: #654e56;  
+    .runbtn{
+      display: block;
+      cursor: pointer;
+      //margin: 0 auto;
+      width: 75px;
+      position: absolute;
+    }
+  }
+  .advise{
+    color: yellow;
+  	font-size: 24px;
+    position: absolute;
+    left: 15px;
+    animation: orbit 4s;
+    .speak{
+      width: 45px;
+      font-size: 18px;
+      display: none;
+    }
+  }
+  .active.speak{
+    display: block;
+  }
+
