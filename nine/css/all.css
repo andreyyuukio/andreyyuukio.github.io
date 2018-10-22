@@ -118,7 +118,7 @@ clearfix::after {
   .wrapper .sidebar {
     position: fixed;
     margin-top: 10px;
-    right: 120px;
+    right: 20%;
     top: 50px;
     float: right;
     border: solid 2px #fff;

@@ -34,7 +34,7 @@
 		
 
 			if(stopleftdiv > 0) {
-				stopdiv.style.cssText = "position: fixed; top: 45px; left: 700px; width: 135px; opacity: 1;";
+				stopdiv.style.cssText = "position: fixed; top: 45px; left: 50%; width: 135px; opacity: 1;";
 							
 			}
 			else if(stopleftdiv <= 0){
