@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <title>Вертикальный слайдер с помощью jQuery и CSS переходами</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<noscript><link rel="stylesheet" type="text/css" href="css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/noscript.css" /><![endif]-->
+    </head>
+    <body>
+		<section id="ps-container" class="ps-container">
+		
+			<div class="ps-header">
+				<h1>Вертикальный слайдер</h1>
+			</div>
+			
+			<div class="ps-contentwrapper">
+			
+				<div class="ps-content">
+					<h2>Bernhard</h2>
+					<span class="ps-price">$120</span>
+					<p>Стул — это неотъемлемый атрибут в коллекции каждого промдизайнера. Их придумывается большое количество, подтверждением чему служат участники и победители многочисленных фестивалей и конкурсов дизайна.</p>
+					<a href="#">Купить</a>
+				</div>
+				
+				<div class="ps-content">
+					<h2>Tobias</h2>
+					<span class="ps-price">$85</span>
+					<p>Стул — это неотъемлемый атрибут в коллекции каждого промдизайнера. Их придумывается большое количество, подтверждением чему служат участники и победители многочисленных фестивалей и конкурсов дизайна.</p>
+					<a href="#">Купить</a>
+				</div>
+				
+				<div class="ps-content">
+					<h2>Pöang</h2>
+					<span class="ps-price">$140</span>
+					<p>Стул — это неотъемлемый атрибут в коллекции каждого промдизайнера. Их придумывается большое количество, подтверждением чему служат участники и победители многочисленных фестивалей и конкурсов дизайна.</p>
+					<a href="#">Купить</a>
+				</div>
+				
+				<div class="ps-content">
+					<h2>Mellby</h2>
+					<span class="ps-price">$195</span>
+					<p>Стул — это неотъемлемый атрибут в коллекции каждого промдизайнера. Их придумывается большое количество, подтверждением чему служат участники и победители многочисленных фестивалей и конкурсов дизайна.</p>
+					<a href="#">Купить</a>
+				</div>
+				
+				<div class="ps-content">
+					<h2>Torbjörn</h2>
+					<span class="ps-price">$30</span>
+					<p>Стул — это неотъемлемый атрибут в коллекции каждого промдизайнера. Их придумывается большое количество, подтверждением чему служат участники и победители многочисленных фестивалей и конкурсов дизайна.</p>
+					<a href="#">Купить</a>
+				</div>
+			</div>
+			
+			<div class="ps-slidewrapper">
+			
+				<div class="ps-slides">
+					<div style="background-image:url(images/1.jpg);"></div>
+					<div style="background-image:url(images/2.jpg);"></div>
+					<div style="background-image:url(images/3.jpg);"></div>
+					<div style="background-image:url(images/4.jpg);"></div>
+					<div style="background-image:url(images/5.jpg);"></div>
+				</div>
+				
+				<nav>
+					<a href="#" class="ps-prev" ></a>
+					<a href="#" class="ps-next" ></a>
+				</nav>
+			</div>
+		</section>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				Slider.init();
+			
+			});
+		</script>
+    </body>
+</html>
