@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paint || CAD</title>
+	<link type="text/css" rel="stylesheet" href="css/all.css">
+</head>
+<body>
+	<div class="wrap clearfix">
+  <div class="draw">
+      <div class="canvas-wrapp">
+<canvas id="myCanvas" width="1100px" height="500px"></canvas>   
+</div>
+<div class="butn-wrap">
+  <button id="cad">от предыдущей точки</button>
+  <button id="paint"> безпрерывное</button>
+  <button id="clear"> очистить холст</button>
+</div>
+  </div>
+
+  <div class="color_wrapp">
+    <div class="row1">
+       <div id="colB"></div>
+      <div id="colW"></div>
+    </div>
+    <div class="row2">
+       <div id="colR"></div>
+      <div id="colY"></div>
+    </div>
+    <div class="row3">
+      <div id="colG"></div>
+      <div id="colBl"></div>
+    </div>
+    <div class="row4">
+      <div id="colV"></div>
+      <div id="colO"></div>
+    </div>   
+   <div class="row5">
+      <div id="colBr"></div>
+      <div id="colGy"></div>
+   </div>
+   <div class="row6">
+      <div id="bur">      	
+      </div>
+      <div id="weight">
+      	<form action="" id="selform">
+      		<select name="weight" id="select">
+      			<option selected value="1">1</option>
+      			<option value="2">2</option>
+      			<option value="3">3</option>
+      			<option value="4">4</option>
+      			<option value="5">5</option>
+      		</select></form>
+      </div>
+   </div>   
+  </div>
+</div>
+
+
+
+	<script src="js/main.js?v=0.0.3s"></script>
+</body>
+</html>
