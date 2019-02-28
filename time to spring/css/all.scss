@@ -1,0 +1,41 @@
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css?family=Caveat|Lobster');
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper{
+	max-width: 1200px;
+	min-height: 100vh;
+	margin: 0 auto;
+	background: #0cffe2;
+
+	.timerwrapp{
+		text-align: center;
+		max-width: 750px;
+		margin: 0 auto;
+		.timer{
+			display: inline-block;
+			
+			vertical-align: middle;
+			font-size: 28px;
+			line-height: 36px;
+			h1{
+				padding: 12px 5px;
+				font-style: italic;
+				font-family: 'Caveat', cursive;
+				font-weight: bold;
+				color: red;
+			}
+			span{
+				padding: 10px 5px;
+				color: #f16b0b;				
+				font-family: 'Lobster', cursive;
+			}
+		}
+	}
+}
